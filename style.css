@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: #F1F2F4;
+    width: 100%;
+}
+#nav{
+    background-color: #fff;
+    height: 45px;
+    padding: 10px 2%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.ri-menu-line{
+    position: absolute;
+    font-size: 25px;
+    padding: 5px;
+    display: none;
+}
+#logo{
+    width: 160px;
+    height: 40px;
+}
+#search{
+    display: flex;
+    gap: 0px 10px;
+    width: 700px;
+    font-size: 25px;
+    background-color: #F0F5FF;
+    padding: 5px 10px;
+    border-radius: 10px;
+    height: 65%;
+}
+#search>input{
+    outline: none;
+    font-size: 18px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}
+#login{
+    width: 5%;
+    font-size: 17px;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+    gap: 7px;
+    transition: 0.2s ease-out;
+    position: relative;
+}
+#login:hover{
+    background-color: #00F;
+    color: #fff;
+}
+#login:hover~#dropdown{
+    display:inline;
+}
+#login:hover>.ri-arrow-down-s-line{
+    transform: rotate(180deg);
+}
+.ri-account-circle-line,.ri-shopping-cart-line,.ri-store-2-line{
+    font-size: 25px;
+}
+#cart{
+    width: 60px;
+    font-size: 17px;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    gap: 10px;
+}
+#seller{
+    width: 200px;
+    font-size: 17px;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    gap: 10px;
+}
+@media screen and (max-width:1200px){
+    #cartt,#sellerr{
+        display: none;
+    }
+    #cart,#seller{
+        width: 30px;
+    }
+    #dropdown{
+        margin-left: 160px;
+    }
+}
+@media screen and (max-width:1000px){
+    #dropdown{
+        margin-left: 100px;
+    }
+    #login{
+        width: 8%;
+    }
+    #items>#boxes{
+        width: 98%;
+    }
+}
+@media screen and (max-width:1000px){
+    #dropdown{
+        margin-left: 50px;
+    }
+    #items>#boxes{
+        width: 98%;
+    }
+}
+@media screen and (max-width:830px){
+    #seller{
+        display: none;
+    }
+    #search{
+        background-color: #fff;
+    }
+    #search>input,#search>.ri-search-line{
+        display: none;
+    }
+    #login:hover~#dropdown{
+        display: none;
+    }
+    #login:hover{
+        background-color: #fff;
+        color: #000;
+    }
+    .ri-menu-line{
+        display: inline;
+    }
+    #ico{
+        display: none;
+    }
+    #items>#boxes{
+        width: 100%;
+    }
+    #items{
+        width: 100%;
+    }
+}
+#ico{
+    height: 60%;
+    margin-top: 5px;
+    width: 25px;
+}
+#ico{
+    padding: 5px;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+}
+#dropdown{
+    width: 250px;
+    height: 240px;
+    background-color: #fff;
+    position: absolute;
+    left: 63%;
+    top: 50px;
+    box-shadow: 0px 0px 20px #ddd;
+    border-radius: 10px;
+    display: none;
+}
+#dropdown>#reg{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;    
+}
+#dropdown>#reg>h4{
+    margin-right: 20px;
+}
+#dropdown>ul>li{
+    display: block;
+    padding: 6px 10px;
+}
+#dropdown>ul>li:hover{
+    background-color: #f7f7f7;
+}
+#dropdown:hover{
+    display: inline;
+}
+#drop{
+    width: 240px;
+    height: 140px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px #dfdfdf;
+    position: absolute;
+    right: 0;
+    border-radius: 10px;
+    margin: 20px;
+    margin-top: 40px;
+    padding: 5px;
+    display: none;
+}
+#drop>#op>ul>li{
+    padding: 7px 10px;
+    display: block;
+}
+#drop>#op>ul>li:hover{
+    background-color: #ece9e9;;
+}
+#drop:hover{
+    display: block;
+}
+#ico:hover~#drop{
+    display: block;
+}
+#body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#items{
+    width: 98%;
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    margin: 8px 0px;
+}
+#items>#boxes::-webkit-scrollbar{
+    width: 0px;
+}
+#items>#boxes{
+    overflow-x: scroll;
+    padding: 10px 0px;
+    width: 80%;
+    height: 106px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+}
+#items>#boxes>.box{
+    width: 110px;
+}
+#items>#boxes>.box>.img{
+    font-size: 14px;
+    height: 92px;
+    text-align: center;
+    font-weight: 800;
+}
+#slider{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#img{
+    position: absolute;
+    width: 98%;
+    height: 100%;
+    overflow: hidden;
+}
+#img>img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: slide 15s linear infinite;
+}
